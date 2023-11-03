@@ -1,0 +1,206 @@
+<mxfile>
+    <diagram id="ByGPKLMy4q43G2cAR6rj" name="第 1 页">
+        <mxGraphModel dx="1374" dy="1959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#E6E6E6" math="0" shadow="1">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="出库称重流程" style="swimlane;html=1;childLayout=stackLayout;startSize=30;rounded=0;shadow=0;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=8;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="-1160" width="1990" height="1720" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="子流程" style="swimlane;html=1;startSize=20;" parent="2" vertex="1">
+                    <mxGeometry y="30" width="290" height="1690" as="geometry"/>
+                </mxCell>
+                <mxCell id="219" value="校验物流出库单，出库单不允许为已发货" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="3">
+                    <mxGeometry x="60" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="227" value="校验出库单&lt;br&gt;FREEZE_BLOCK级别" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="3">
+                    <mxGeometry x="60" y="960" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="&lt;br&gt;&lt;br&gt;" style="swimlane;html=1;startSize=20;" parent="2" vertex="1">
+                    <mxGeometry x="290" y="30" width="710" height="1690" as="geometry">
+                        <mxRectangle x="210" y="30" width="40" height="1180" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="15" source="17" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="开始" style="ellipse;whiteSpace=wrap;html=1;" parent="15" vertex="1">
+                    <mxGeometry x="180" y="40" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="根据物流单号拉出出库单信息" style="rounded=0;whiteSpace=wrap;html=1;" parent="15" vertex="1">
+                    <mxGeometry x="180" y="140" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="15" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="480" as="sourcePoint"/>
+                        <mxPoint x="240" y="480" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="15" target="30" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="240" y="250" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="30" value="进行称重操作" style="rounded=0;whiteSpace=wrap;html=1;" parent="15" vertex="1">
+                    <mxGeometry x="180" y="330" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="更新货品重量" style="whiteSpace=wrap;html=1;rounded=0;" parent="15" vertex="1">
+                    <mxGeometry x="180" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="15" source="19" target="126" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="&lt;font face=&quot;宋体, monospace&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;登记打包员&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="15" vertex="1">
+                    <mxGeometry x="165" y="560" width="150" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="包装积分重新计算&lt;br&gt;记录综合积分" style="whiteSpace=wrap;html=1;rounded=0;" parent="15" vertex="1">
+                    <mxGeometry x="180" y="650" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="15" source="132" target="134" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;font color=&quot;#24292e&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;校验称重后自动同步物流、称重后立即发货延迟发货配置如果配置了就同步物流&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="15" vertex="1">
+                    <mxGeometry x="107.5" y="880" width="265" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="&lt;span style=&quot;color: rgb(36 , 41 , 46) ; font-family: , &amp;#34;blinkmacsystemfont&amp;#34; , , &amp;#34;pingfang sc&amp;#34; , &amp;#34;helvetica&amp;#34; , &amp;#34;arial&amp;#34; , &amp;#34;hiragino sans gb&amp;#34; , &amp;#34;microsoft yahei&amp;#34; , &amp;#34;simsun&amp;#34; , , &amp;#34;heiti&amp;#34; , , sans-serif ; font-size: 14px ; text-align: left&quot;&gt;如果配置了称重后发货执行发货方法&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="15" vertex="1">
+                    <mxGeometry x="125" y="1010" width="230" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="15" source="138" target="140" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="修改包装" style="whiteSpace=wrap;html=1;rounded=0;" parent="15" vertex="1">
+                    <mxGeometry x="180" y="430" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="15" source="30" target="130" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="15" source="130" target="132" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="&lt;div&gt;称重&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="15" vertex="1">
+                    <mxGeometry x="180" y="770" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="15" source="134" target="136" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="15" source="136" target="138" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="关键表信息" style="swimlane;html=1;startSize=20;" parent="2" vertex="1">
+                    <mxGeometry x="1000" y="30" width="220" height="1690" as="geometry"/>
+                </mxCell>
+                <mxCell id="204" value="&lt;div&gt;stockout_logistics_order&lt;/div&gt;&lt;div&gt;stockout_order&lt;/div&gt;&lt;div&gt;sales_trade&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="99" vertex="1">
+                    <mxGeometry x="63.75" y="80" width="145" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="216" value="stockout_logistics_order&lt;div&gt;&lt;span&gt;stockout_order&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;stockout_order_detail&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="99" vertex="1">
+                    <mxGeometry x="59.75" y="295" width="149" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="205" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2" source="19" target="204" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="207" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2" source="204" target="206" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="217" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="2" source="30" target="216" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="218" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="2" source="216" target="212" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="220" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="2" source="130" target="219">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="228" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="2" source="136" target="227">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="340" y="830"/>
+                            <mxPoint x="340" y="960"/>
+                            <mxPoint x="120" y="960"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="112" value="方法" style="swimlane;html=1;startSize=20;" parent="2" vertex="1">
+                    <mxGeometry x="1220" y="30" width="770" height="1690" as="geometry"/>
+                </mxCell>
+                <mxCell id="206" value="&lt;font color=&quot;#24292e&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;wms.stockout.Sales.getTrade&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="112" vertex="1">
+                    <mxGeometry x="100" y="92.5" width="392.5" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="212" value="&lt;font color=&quot;#24292e&quot;&gt;&lt;span style=&quot;font-size: 14px&quot;&gt;wms.stockout.Sales.weighing&lt;/span&gt;&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="112" vertex="1">
+                    <mxGeometry x="170" y="320" width="310" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="237" value="com.wangdian.erp.service.wms.stockout.sales.SalesService#changePackage" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="112">
+                    <mxGeometry x="40" y="435" width="520" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="239" value="com.wangdian.erp.service.wms.stockout.sales.SalesService#registerPackagerImpl" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="112">
+                    <mxGeometry x="130" y="555" width="510" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="241" value="com.wangdian.erp.service.setting.strategy.performance.PerformanceStrategyUtils#calAndRecordStockoutOrderScore" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="112">
+                    <mxGeometry x="20" y="652.5" width="660" height="55" as="geometry"/>
+                </mxCell>
+                <mxCell id="243" value="com.wangdian.erp.service.wms.stockout.sales.SalesService#weighingImpl" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="112">
+                    <mxGeometry x="90" y="770" width="530" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="245" value="com.wangdian.erp.service.wms.stockout.sales.SalesService#consign" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="112">
+                    <mxGeometry x="110" y="1010" width="470" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="238" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="2" source="130" target="237">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="240" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="2" source="132" target="239">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="242" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="2" source="134" target="241">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="244" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="2" source="136" target="243">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="246" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="2" source="140" target="245">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="224" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="221" target="223">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="221" value="重算重量和原有重量比较" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="-560" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="222" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="219" target="221">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="226" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="223" target="225">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="223" value="如果重量不等需要更新出库单预估邮资和称重预估邮资" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="-420" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="225" value="如果包装修改成功记录异常日志" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="-280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="232" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="229" target="231">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="229" value="校验销售出库必须验货&lt;br&gt;销售出库必须先验货后称重" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="-30" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="230" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="227" target="229">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="234" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="231" target="233">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="231" value="校验物流公司重量上限" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="110" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="236" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="233" target="235">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="233" value="检查实际重量与预估重量差值并给出提示" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="250" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="235" value="更新物流单状态和物流单的预估重量和预估邮费" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
